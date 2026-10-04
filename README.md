@@ -5,8 +5,8 @@
 [![Neural IR](https://img.shields.io/badge/Neural%20IR-SPLADE%20%7C%20HyDE%20%7C%20Doc2Query-green.svg)]()
 [![IIT Bombay](https://img.shields.io/badge/IIT%20Bombay-CS6101%20Text%20%26%20Graph%20Retrieval-red.svg)](https://www.cse.iitb.ac.in/)
 
-> **Academic Affiliation**: Course Project for **CS 6101: Indexing and Retrieving Text and Graphs**, IIT Bombay  
-> **Collaborators**: **Dheeraj Kumar Maradana** ([@dheerajkumar2005](https://github.com/dheerajkumar2005)) & **Amrutanshu Mohanty** ([@amrutanshu-mohanty](https://github.com/amrutanshu-mohanty))
+> **Academic Affiliation**: Assignment 1 for **CS 6101: Indexing and Retrieving Text and Graphs**, IIT Bombay  
+
 
 ---
 
@@ -19,22 +19,6 @@ This repository contains an end-to-end information retrieval framework evaluatin
 * **Document-Side Expansion**: Neural **Doc2Query** expansion predicting potential user queries per passage.
 * **Learned Sparse Representations**: Pretrained and custom fine-tuned **SPLADE** (Sparse Lexical and Anonymized / Dense) models with FLOPS regularization.
 
-```mermaid
-flowchart LR
-    A["Raw Corpus<br/>(SciFact, FEVER, HotpotQA, MSMARCO)"] --> B["Document Expansion<br/>(Doc2Query / T5)"]
-    B --> C["Lucene Inverted Index<br/>(Pyserini)"]
-    
-    Q["User Query"] --> D{"Expansion Mode"}
-    D -->|"Baseline"| E["BM25 / TF-IDF"]
-    D -->|"PRF"| F["Rocchio / RM3"]
-    D -->|"Generative"| G["HyDE (LLM Prompting)"]
-    
-    E --> H["Ranking & Scoring<br/>nDCG@10, MAP, MRR, Recall"]
-    F --> H
-    G --> H
-    
-    Q --> S["SPLADE Neural Encoder"] --> H
-```
 
 ---
 
