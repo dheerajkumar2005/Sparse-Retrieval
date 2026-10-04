@@ -1,4 +1,4 @@
-# Neural & Sparse Retrieval Search Engine
+# Sparse Retrieval Techniques Benchmarking
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Pyserini / Lucene](https://img.shields.io/badge/Lucene-Pyserini%20%7C%20Java%2021-orange.svg)]()
